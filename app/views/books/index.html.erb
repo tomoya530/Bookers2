@@ -15,18 +15,27 @@
                 <tr></tr>
                 <tr>
                   <th>name</th>
-                  <th><h3 class="profile-name"><%= @user.name %></h3></th>
+                  <th><h4 class="profile-name"><%= @user.name %></h4></th>
                 </tr>
                 <tr>
                   <th>introduction</th>
-                  <th><h3 class="introduction"><%= @user.introduction %></h3></th>
+                  <th><h4 class="introduction"><%= @user.introduction %></h4></th>
+                </tr>
+                 <tr>
+                  <th>follows</th>
+                  <td><%= link_to @user.follower.count, user_following_user_path(@user), method: :get %></td>
+                </tr>
+                <tr>
+                  <th>followers</th>
+                  <td><%= link_to @user.followed.count, user_follower_user_path(@user), method: :get %></td>
+                </tr>
                </tbody>
              </table>
-                <div>
+
           <%= link_to edit_user_path(@user), class: "btn btn-outline-secondary btn-block ",method: :get do %>
           <i class="fas fa-user-cog"></i>
           <% end %>
-                </div>
+
 
       <h2>New book</h2>
 
