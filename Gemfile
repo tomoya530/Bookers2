@@ -69,3 +69,5 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 
 gem 'pry-rails'
+
+gem 'jquery-rails'
